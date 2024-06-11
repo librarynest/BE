@@ -1,14 +1,12 @@
-import { OkPacket, PoolConnection, RowDataPacket, QueryError } from "mysql2";
+import { OkPacket, RowDataPacket } from "mysql2";
 import { connect } from ".";
 import { Book } from "../models/book";
-import { CustomError } from "../utils/errorHandlers";
-import { Pool } from "mysql2/promise";
 
 const selectAll = async (): Promise<Book[]> => {
   const pool = await connect();
   try {
     const [rows] = await pool.query("SELECT * FROM Book");
-    const books: Book[] = (rows as any[]).map((row) => {
+    const books: Book[] = (rows as RowDataPacket[]).map((row) => {
       return {
         BookID: row.BookID,
         Title: row.Title,

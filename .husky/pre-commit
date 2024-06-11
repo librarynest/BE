@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn tsc && yarn lint && yarn format || { echo "Linting or formatting failed. Please fix the issues before committing."; exit 1; }
+git add -A

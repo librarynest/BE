@@ -1,7 +1,5 @@
 import { Request, Response } from "express";
 import { Book } from "../models/book";
-import { connect } from "../db";
-import { QueryError, PoolConnection } from "mysql2";
 import bookService from "../db/book.service";
 
 const getAll = async (req: Request, res: Response) => {

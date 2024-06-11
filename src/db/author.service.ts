@@ -1,4 +1,4 @@
-import { OkPacket } from "mysql2";
+import { OkPacket, RowDataPacket } from "mysql2";
 import { connect } from ".";
 import { Author } from "../models/author";
 
@@ -6,7 +6,7 @@ const selectAll = async (): Promise<Author[]> => {
   const pool = await connect();
   try {
     const [rows] = await pool.query("SELECT * FROM Author");
-    const author: Author[] = (rows as any[]).map((row) => {
+    const author: Author[] = (rows as RowDataPacket[]).map((row) => {
       return {
         AuthorID: row.AuthorID,
         FirstName: row.FirstName,
