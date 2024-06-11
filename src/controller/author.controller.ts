@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import authorService from "../db/author.service";
+import authorService from "../db/author/author.service";
 import { Author } from "../models/author";
 
 const getAllAuthor = async (req: Request, res: Response) => {

@@ -4,8 +4,8 @@ import dbConfig from "../config/db.config";
 export async function connect() {
   const connection = await createPool({
     host: dbConfig.host,
-    user: "root",
-    password: "",
+    user: dbConfig.user,
+    password: dbConfig.password,
     database: dbConfig.database,
     connectionLimit: 10,
   });

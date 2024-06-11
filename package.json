@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "build": "npx build",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc",
     "format": "prettier --write .",
     "start": "node dist/index.js",
-    "dev": "nodemon index.ts",
+    "dev": "nodemon",
     "lint": "eslint .",
     "prepare": "husky install"
   },
@@ -17,10 +17,19 @@
   "license": "ISC",
   "dependencies": {
     "@eslint/js": "^9.4.0",
+    "@types/bcrypt": "^5.0.2",
     "@types/eslint__js": "^8.42.3",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "eslint": "^9.4.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "express": "^4.19.2",
     "husky": "^9.0.11",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.10.0",
     "prettier": "^3.3.1",
     "typescript-eslint": "^7.13.0"

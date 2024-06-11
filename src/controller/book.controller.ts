@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Book } from "../models/book";
-import bookService from "../db/book.service";
+import bookService from "../db/book/book.service";
 
 const getAll = async (req: Request, res: Response) => {
   bookService

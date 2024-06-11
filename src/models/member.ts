@@ -3,6 +3,7 @@ export interface Member {
   FirstName: string;
   LastName: string;
   Email: string;
+  Password: string;
   Phone: string;
   Address: string;
 }

@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "rootDir": "./",
+    "outDir": "./dist",
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -8,13 +10,14 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "sourceMap": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "src/**/*.ts", "pages/_document.tsx"],
   "exclude": ["node_modules"]
 }
